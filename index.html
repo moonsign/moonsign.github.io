@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/all.css" />
+    <link rel="stylesheet" type="text/css" href="css/test.css" />
+    <link rel="stylesheet" type="text/css" href="css/jamui.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <style>
+        @keyframes aaa {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes bbb {
+            from {
+                /*                 transform: rotate(360deg)  translateX(-50%) translateY(-50%) rotate(360deg); */
+                transform: rotate(360deg) translateX(-50%) translateY(-50%);
+            }
+
+            to {
+                /*                 transform: rotate(0deg) translateX(-50%) translateY(-50%) rotate(0deg); */
+                /*                 transform: rotate(0deg) translateX(0%) translateY(0%) ; */
+                transform: rotate(0deg) translateX(-50%) translateY(-50%);
+            }
+        }
+
+        #container {
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            position: relative;
+            top: 30%;
+            border: 1px solid red;
+        }
+
+        #aa {
+            /* top:50%; */
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            animation: aaa 10s infinite linear;
+            transform-origin: 0% 0%;
+            border: 1px solid green;
+            overflow: hidden;
+        }
+
+        #aa i {
+            /* display: inline-block; */
+            position: absolute;
+            /* top: 50%; */
+            /* transform: translateY(-50%); */
+            width: 80%;
+            /* left:0%; */
+            height: 80%;
+            top: -50%;
+            left: -50%;
+            /*             transform-origin: 50% 50%; */
+            /*             transform: translateX(-50%) translateY(-50%); */
+            animation: bbb 10s infinite linear;
+            border: 4px rgb(56, 56, 56) solid;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="long-shadow-test">some text</div>
+    <div id="container">
+        <div id="aa">
+            <i></i>
+        </div>
+    </div>
+    <a href="data:application/octet-stream,field1%2Cfield2%0Afoo%2Cbar%0Agoo%2Cgai%0A">CSV Octet</a>
+
+
+    <script type="text/javascript" src="js/global-config.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            dropLongShadow($('#long-shadow-test'), { blur: 10, x: '6vh', y: '12vh', opacity: 0.35 }
+            );
+        });
+    </script> -->
+
+
+    <div class="nice-hover-t" style="
+    position:absolute;
+    left: 200px;
+    top: 100px;
+    width: 200px;
+    height: 200px;
+    background: gray;
+">nice hover test</div>
+
+    <div class="nice-hover-t" style="
+    position:absolute;
+    left: 500px;
+    top: 100px;
+    width: 100px;
+    height: 100px;
+    background: gray;
+    transform: translate(1px,2px) rotate(20deg);
+">nice hover test transformed</div>
+
+    <div class="nice-hover-t" style="
+    position:absolute;
+    left: 700px;
+    top: 100px;
+    width: 50px;
+    height: 50px;
+    background: gray;
+">nice hover test</div>
+
+
+    <div class="nice-hover-t" style="
+    position:absolute;
+    left: 100px;
+    top: 400px;
+    width: 300px;
+    height: 200px;
+    background: gray;
+">nice hover test</div>
+
+    <div class="nice-hover-t" style="
+    position:fixed;
+    left: 500px;
+    top: 300px;
+    width: 100px;
+    height: 400px;
+    background: gray;
+">nice hover test</div>
+
+    <div class="nice-hover-t" style="
+position:absolute;
+display: flex;
+align-items: center;
+left: 700px;
+top: 200px;
+width: 330px;
+height: 330px;
+background: gray;
+border-radius: 20px;
+">nice hover test
+
+        <div class="nice-hover-t" style="
+left: 50%;
+top: 50%;
+width: 100px;
+height: 100px;
+transform: translate(-50%, -50%);
+background: rgb(134, 49, 49);
+border-radius: 3px;
+">nice hover test relative</div>
+    </div>
+
+    <script type="text/javascript" src="js/jamui.js">    </script>
+    <script>
+        makeNiceHoverT({
+            roundCorner: true
+        });
+    </script>
+</body>
+
+</html>
